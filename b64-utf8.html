@@ -1,0 +1,18 @@
+<script language="javascript">
+function utf8_to_b64(str) {
+return window.btoa(unescape(encodeURIComponent(str)));
+}
+function b64_to_utf8(str) {
+return decodeURIComponent(escape(window.atob(str)));
+}
+function utf8(){
+	var txt = document.getElementById('text').value ;
+	document.getElementById('text').value = b64_to_utf8(txt) ;
+}
+function b64(){
+	var txt = document.getElementById('text').value ;
+	document.getElementById('text').value = utf8_to_b64(txt) ;
+}
+</script>
+<button onclick="b64();">b64</button><button onclick="utf8();">utf8</button><br />
+<textarea rows="10" cols="45" id="text"></textarea>
