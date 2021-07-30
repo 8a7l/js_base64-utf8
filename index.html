@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+	<head>
 <script language="javascript">
 function utf8_to_b64(str) {
 return window.btoa(unescape(encodeURIComponent(str)));
@@ -14,5 +17,9 @@ function b64(){
 	document.getElementById('text').value = utf8_to_b64(txt) ;
 }
 </script>
+	</head>
+	<body>	
 <button onclick="b64();">b64</button><button onclick="utf8();">utf8</button><br />
 <textarea rows="10" cols="45" id="text"></textarea>
+	</body>
+</html>	
